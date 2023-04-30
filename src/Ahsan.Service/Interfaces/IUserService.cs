@@ -14,8 +14,8 @@ public interface IUserService
         Expression<Func<User, bool>> expression = null, string search = null);
     ValueTask<bool> DeleteAsync(long id);
     ValueTask<UserImageForResultDto> ImageUploadAsync(UserImageForCreationDto dto);
-    ValueTask<bool> DeleteUserImageAsync(long userId);
     ValueTask<UserImageForResultDto> GetUserImageAsync(long userId);
+    ValueTask<bool> DeleteUserImageAsync(long userId);
     ValueTask<UserForResultDto> CheckUserAsync(string username, string password = null);
     ValueTask<UserForResultDto> UserVerify(string code);
 }

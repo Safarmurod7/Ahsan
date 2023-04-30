@@ -88,7 +88,7 @@ public class UserService : IUserService
 
         this.mapper.Map(dto, updatingUser);
         updatingUser.UpdatedAt = DateTime.UtcNow;
-        await this.userRepository.SaveChangesAsync();
+        await this.userRepository.SaveChangesAsync();   
 
         var result = mapper.Map<UserForResultDto>(updatingUser);
         result.Image = mapper.Map<UserImageForResultDto>(
